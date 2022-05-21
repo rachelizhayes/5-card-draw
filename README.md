@@ -16,13 +16,13 @@ or any part of the implementation that you didn’t have time to complete
 
 ## How To Run
 NOTE: I started my project with initial boilerplate code from https://spring.io/guides/gs/rest-service/#initial 
-1. Install Git if you do not already have it (instructions here: https://github.com/git-guides/install-git)
-2. Clone this repo
-3. Download java if you do not already have it  (instructions here: https://java.com/en/download/). You can check if you already have it 
-installed by running `java -version` in your terminal 
-4. Install HomeBrew (https://brew.sh) so that we can easily install Gradle (`brew install gradle`). If you already have Gradle you can skip this step; this project was built using Gradle 7.4.2
-5. Since we are using Gradle, you can now run the application by using the `./gradlew bootRun` command 
-6. Download Postman (instructions here: https://www.postman.com/downloads/) and hit the following endpoint 
+1. Check whether git is installed (run `git --version`) on your machine and if not installed, 
+install it following instructions here: https://github.com/git-guides/install-git)
+2. Clone this repo and cd into project folder “5-card-draw”
+3. Check whether Java JDK is installed (run `javac -version`) on your machine and if not installed,
+install it for your machine here: https://www.oracle.com/java/technologies/downloads/
+4. Run the application by using the `./gradlew bootRun` command
+5. Download Postman (instructions here: https://www.postman.com/downloads/) and hit the following endpoint
 (or optionally make a call using curl if you prefer to not download Postman)
 
 POST "http://localhost:8080/poker/evaluate" with a body of any number of hands you want (example below):
@@ -34,15 +34,15 @@ POST "http://localhost:8080/poker/evaluate" with a body of any number of hands y
             "ACE_CLUBS",
             "EIGHT_CLUBS",
             "FIVE_CLUBS",
-            "FIVE_DIAMONDS",
-            "TWO_CLUBS"
+            "ACE_DIAMONDS",
+            "ACE_HEARTS"
         ]
     },
     {
         "cards": [
-            "ACE_CLUBS",
+            "KING_CLUBS",
             "EIGHT_CLUBS",
-            "FIVE_CLUBS",
+            "QUEEN_CLUBS",
             "FIVE_DIAMONDS",
             "THREE_CLUBS"
         ]
